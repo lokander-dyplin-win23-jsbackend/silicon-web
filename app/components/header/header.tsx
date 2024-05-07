@@ -1,39 +1,42 @@
+import Link from 'next/link';
+import styles from './Header.module.css'
+
 export default function Header() {
   return (
-    <header>
-      <div className="container">
-        <a id="logo" href="home.html">
-          <img src="" alt="" />{" "}
-        </a>
-        <div id="menu">
-          <nav>
-            <a className="menu-link" href="#showcase">
+    <header className={styles.header}>
+      <div className={ `container ${styles.container}`}>
+        <Link id={styles.logo} href="/">
+          <img src="/images/Silicon-Logotype-Light-Mode.svg" alt="" />
+        </Link>
+        <div id={styles.menu}>
+          <nav className={styles.nav}>
+            <Link className="menu-link" href="#showcase">
               Showcase
-            </a>
-            <a className="menu-link" href="#features">
+            </Link>
+            <Link className="menu-link" href="#features">
               Features
-            </a>
-            <a className="menu-link" href="contact.html">
+            </Link>
+            <Link className="menu-link" href="/courses">
+              Courses
+            </Link>
+            <Link className="menu-link" href="/contact">
               Contact
-            </a>
+            </Link>
           </nav>
         </div>
-        <div className="btn-switch">
+
+        <div className={ `btn-switch ${styles.btnSwitch}`}>
           <label>Light</label>
           <label className="switch" htmlFor="switch-mode">
-            <input type="checkbox" id="switch-mode" />
-            <div className="slider round"></div>
+              <input type="checkbox" id="switch-mode" />
+              <span className="slider round"></span>
           </label>
-        </div>
-        <div className="account-buttons">
-          <a className="btn-gray" asp-controller="Auth" asp-action="SignIn">
-            <i className="fa-regular fa-right-to-bracket"></i>
-            <span>Sign in</span>
-          </a>
-          <a className="btn-theme" asp-controller="Auth" asp-action="SignUp">
-            <i className="fa-regular fa-user"></i>
-            <span>Sign up</span>
-          </a>
+          <label>Dark</label>
+      </div>
+
+        <div className={styles.accountButtons}>
+          <Link className="btn btn-gray" href="/signin"><i className="fa-regular fa-right-to-bracket"></i><span>Sign in</span></Link>
+          <Link className="btn btn-theme" href="/signup"><i className="fa-regular fa-user"></i><span>Sign up</span></Link>
         </div>
       </div>
     </header>

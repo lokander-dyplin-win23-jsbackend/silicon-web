@@ -1,0 +1,88 @@
+.header {
+    padding: 15px 0;
+}
+.container {
+    padding: 15px 0;
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas:  "logo menu switch buttons";
+    gap: 40px;
+}
+
+.container #logo {
+    grid-area: logo;
+}
+
+.container #menu {
+    grid-area: menu;
+    display: none;
+}
+
+@media (min-width: 1200px) {
+    .container #menu {
+        display: block;
+    }
+}
+
+.container #menu .nav {
+    display: flex;
+    gap: 15px;
+}
+.container #menu .nav a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--color-gray-800);
+    padding: 0;
+}
+.container #menu .nav a:hover {
+    color: var(--color-theme);
+}
+
+.container .btnSwitch {
+    grid-area: switch;
+    display: none;
+}
+
+
+.container .accountButtons {
+    grid-area: buttons;
+    display: none;
+    gap: 15px;
+}
+
+/* .container .accountButtons a {
+    border: 1px solid black;
+} */
+
+.container .btnMobile {
+    grid-area: mobile;
+}
+
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: auto 1fr auto auto;
+        grid-template-areas: "logo menu switch buttons";
+    }
+
+    .container #menu {
+        display: block;
+    }
+
+    .container .btnSwitch {
+        display: block;
+    }
+    .container .btnSwitch label {
+        margin: 0 5px;
+    }
+
+    .container .accountButtons {
+        display: flex;
+    }
+
+    .container .btnMobile {
+        display: none;
+    }
+}

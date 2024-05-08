@@ -1,0 +1,24 @@
+.footer {
+    color: #9397ad;
+    padding: 10px;
+    margin: 20px;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialMedia {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+
+.copyright{
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}

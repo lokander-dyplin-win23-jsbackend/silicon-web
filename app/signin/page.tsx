@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styles from "./signin.module.css";
 
 export default function SignIn() {
@@ -8,17 +9,17 @@ export default function SignIn() {
           <div className="statusMessage"></div>
           <h1> Welcome back</h1>
           <p>
-            Dont have an account? <a href="signup">Sign up here</a>.
+            Dont have an account? <Link href="signup">Sign up here</Link>.
           </p>
           <div className={styles.content}>
             <div className={`input-group ${styles.formEmail}`}>
               <label htmlFor="Email">Email</label>
-              <span className={styles.validationError}></span>
+              <span className="validation-error"></span>
               <input type="email" />
             </div>
             <div className={`input-group ${styles.formPassword}`}>
               <label htmlFor="Password">Password</label>
-              <span className={styles.validationError}></span>
+              <span className="validation-error"></span>
               <input type="password" />
             </div>
             <div className={`input-group ${styles.formTerms}`}>
@@ -32,16 +33,17 @@ export default function SignIn() {
                 />
                 <label htmlFor="RememberMe"> Remember me</label>
               </div>
-              <span className={styles.validationError}></span>
+              <span className="validation-error"></span>
             </div>
+            <button
+              id="formSubmit"
+              className={`btn btn-theme-s ${styles.formSubmit}`}
+              type="submit"
+            >
+              Sign up
+            </button>
+            <Link href="/" className={styles.formForgotPassword}>Forgot your password?</Link>
           </div>
-          <button
-            id="formSubmit"
-            className={`btn btn-theme-s ${styles.formSubmit}`}
-            type="submit"
-          >
-            Sign up
-          </button>
         </form>
       </div>
     </section>

@@ -102,6 +102,8 @@ a:hover {
 }
 
 .btn {
+  border: 1px solid transparent;
+  color: var(--color-gray-800);
   border-radius: 6px;
   text-align: center;
   font-size: 14px;
@@ -110,7 +112,16 @@ a:hover {
   justify-content: center;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
+  outline: none;
 }
+
+/* .btn:hover {
+  border: 1px solid var(--color-gray-800);
+  background-color: var(--color-gray-800);
+  color: var(--color-gray-100);
+  text-decoration: none;
+} */
 
 .btn-theme {
   background: var(--color-theme);

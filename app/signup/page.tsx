@@ -2,49 +2,45 @@ import styles from "./signup.module.css";
 
 export default function SignUp() {
   return (
-    <section className={styles.signup}>
-      <div className={styles.container}>
-        <form className={styles.form} method="post" noValidate>
+    <section className={styles.signUp}>
+      <div className={`container ${styles.container}`}>
+        <form className="form" method="post" noValidate>
           <h1> Create Account</h1>
           <p>
             Already have an account? <a href="/signin">Sign in here</a>.
           </p>
           <div className={styles.content}>
-            <div id="form-firstname" className={styles.inputGroup}>
+            <div className={`input-group ${styles.formFirstname}`}>
               <label htmlFor="FirstName">Firstname</label>
               <span className={styles.validationError}></span>
-              <input type="text" id="FirstName" name="FirstName" />
+              <input type="text" />
             </div>
-            <div id="form-lastname" className={styles.inputGroup}>
+            <div className={`input-group ${styles.formLastname}`}>
               <label htmlFor="LastName">Lastname</label>
               <span className={styles.validationError}></span>
-              <input type="text" id="LastName" name="LastName" />
+              <input type="text" />
             </div>
-            <div id="form-email" className={styles.inputGroup}>
+            <div className={`input-group ${styles.formEmail}`}>
               <label htmlFor="Email">Email</label>
               <span className={styles.validationError}></span>
-              <input type="email" id="Email" name="Email" />
+              <input type="email" />
             </div>
-            <div id="form-password" className={styles.inputGroup}>
+            <div className={`input-group ${styles.formPassword}`}>
               <label htmlFor="Password">Password</label>
               <span className={styles.validationError}></span>
-              <input type="password" id="Password" name="Password" />
+              <input type="password" />
             </div>
-            <div id="form-confirm" className={styles.inputGroup}>
+            <div className={`input-group ${styles.formConfirm}`}>
               <label htmlFor="ConfirmPassword">Confirm Password</label>
               <span className={styles.validationError}></span>
-              <input
-                type="password"
-                id="ConfirmPassword"
-                name="ConfirmPassword"
-              />
+              <input type="password" />
             </div>
-            <div id="form-terms" className={styles.checkboxGroup}>
-              <div className={styles.inputGroup}>
+            <div className={`input-group ${styles.formTerms}`}>
+              <div className="input-group">
                 <input
                   type="checkbox"
                   value=""
-                  id="agreeterms"
+                  className="agreeterms"
                   name="agreeterms"
                   // checked={item.checked}
                 />
@@ -58,8 +54,8 @@ export default function SignUp() {
             </div>
           </div>
           <button
-            id="form-submit"
-            className={`${styles.btnThemeS} ${styles.formSubmit}`}
+            id="formSubmit"
+            className={`btn btn-theme-s ${styles.formSubmit}`}
             type="submit"
           >
             Sign up

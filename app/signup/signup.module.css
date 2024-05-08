@@ -1,134 +1,74 @@
-.signup {
-    width: 100%;
-    display: grid;
+.signUp {
+  height: 100%;
 }
 
 .container {
-    display: grid;
+  display: flex;
+  width: 20%;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 0;
 }
 
-.input-group {
-    display: grid;
+.content {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "firstname lastname"
+    "email email"
+    "password password"
+    "confirm confirm"
+    "terms terms"
+    "button button";
 }
 
-.checkbox span {
-    display: block;
+.inputGroup {
+  display: grid;
+}
+/* @media (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "firstname lastname"
+      "email email"
+      "password password"
+      "confirm confirm"
+      "terms terms"
+      "button button";
+  }
+} */
+
+.formFirstname {
+  grid-area: firstname;
+  display: grid;
 }
 
-.checkbox span.field-validation-error {
-    position: static;
-    top: 0;
-    right: 0;
-    font-size: 1rem; /* Assuming text-s mixin sets font-size */
-    color: #ff0000; /* Red color for danger messages */
+.formLastname {
+  grid-area: lastname;
+  display: grid;
 }
 
-.checkbox-group {
-    position: relative;
-    height: 50px;
+.formEmail {
+  grid-area: email;
+  display: grid;
 }
 
-.checkbox-group .input-group {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 0.5rem;
+.formPassword {
+  grid-area: password;
+  display: grid;
 }
 
-.checkbox-group .input-group input[type="checkbox"] {
-    height: 1.5rem;
-    width: 1.5rem;
+.formConfirm {
+  grid-area: confirm;
+  display: grid;
 }
 
-.checkbox-group .input-group input[type="checkbox"].input-validation-error {
-    position: relative;
-    box-shadow: 0 0 0 0.063rem #ff0000;
-    color: #ff0000;
+.formTerms {
+  grid-area: terms;
+  padding: 1rem 0;
 }
 
-.checkbox-group
-    .input-group
-    input[type="checkbox"].input-validation-error::placeholder {
-    color: #ff0000;
-}
-
-.checkbox-group .input-group label {
-    margin: 0;
-    font-weight: 400;
-}
-
-.checkbox-group span {
-    position: relative;
-}
-
-.checkbox-group span.field-validation-error {
-    font-size: 1rem; /* Assuming text-s mixin sets font-size */
-    color: #ff0000;
-}
-
-.checkbox-group span.field-validation-error::after {
-    position: absolute;
-    right: 10px;
-    top: 0px;
-    z-index: 10;
-    font-size: 2em;
-    display: block;
-    content: "\2BBF";
-}
-
-.label {
-    margin-bottom: 0.188rem;
-    font-weight: 700;
-}
-
-.input,
-.textarea {
-    padding: 1rem;
-    border-radius: 0.5rem !important;
-    border: 0.063rem solid #cccccc; /* Gray color for default border */
-    outline: none;
-}
-
-.input::placeholder,
-.textarea::placeholder {
-    opacity: 0.4;
-}
-
-.input.input-validation-error,
-.textarea.input-validation-error {
-    position: relative;
-    border: 0.063rem solid #ff0000;
-    color: #ff0000;
-}
-
-.input.input-validation-error::placeholder,
-.textarea.input-validation-error::placeholder {
-    color: #ff0000;
-}
-
-.input:focus,
-.textarea:focus {
-    border: 0.063rem solid #666666; /* Darker gray color for focused border */
-}
-
-.textarea {
-    resize: none;
-}
-
-.span.field-validation-error {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 1rem; /* Assuming text-s mixin sets font-size */
-    color: #ff0000;
-}
-
-.span.field-validation-error::after {
-    position: absolute;
-    right: 10px;
-    top: 47px;
-    z-index: 10;
-    font-size: 2em;
-    display: block;
-    content: "\2BBF";
+#formSubmit {
+  grid-area: button;
 }

@@ -1,44 +1,47 @@
+import styles from "./signin.module.css";
+
 export default function SignIn() {
   return (
-    <section className="signin">
-      <div className="container">
+    <section className={styles.signIn}>
+      <div className={`container ${styles.container}`}>
         <form method="post" noValidate>
           <div className="statusMessage"></div>
           <h1> Welcome back</h1>
           <p>
             Dont have an account? <a href="signup">Sign up here</a>.
           </p>
-          <div className="content">
-            <div id="form-email" className="input-group">
-              <label asp-for="Email">Email</label>
-              <input asp-for="Email" />
+          <div className={styles.content}>
+            <div className={`input-group ${styles.formEmail}`}>
+              <label htmlFor="Email">Email</label>
+              <span className={styles.validationError}></span>
+              <input type="email" />
             </div>
-            <div id="form-password" className="input-group">
-              <label asp-for="Password">Password</label>
-              <input asp-for="Password" />
+            <div className={`input-group ${styles.formPassword}`}>
+              <label htmlFor="Password">Password</label>
+              <span className={styles.validationError}></span>
+              <input type="password" />
             </div>
-
-            <div id="form-remember" className="checkbox-group">
+            <div className={`input-group ${styles.formTerms}`}>
               <div className="input-group">
                 <input
                   type="checkbox"
                   value=""
-                  id="remeberme"
-                  name="remeberme"
+                  className="agreeterms"
+                  name="agreeterms"
                   // checked={item.checked}
                 />
-                <label>Remeber me</label>
+                <label htmlFor="RememberMe"> Remember me</label>
               </div>
+              <span className={styles.validationError}></span>
             </div>
-            <button id="form-submit" className="btn-theme-s" type="submit">
-              {" "}
-              Sign In
-            </button>
-            <a id="form-forgot-password" asp-controller="Account" asp-action="">
-              {" "}
-              Forgot your password?
-            </a>
           </div>
+          <button
+            id="formSubmit"
+            className={`btn btn-theme-s ${styles.formSubmit}`}
+            type="submit"
+          >
+            Sign up
+          </button>
         </form>
       </div>
     </section>

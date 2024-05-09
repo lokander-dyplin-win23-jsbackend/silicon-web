@@ -10,8 +10,8 @@ export default function Header() {
         </Link>
         <div id={styles.menu}>
           <nav className={styles.nav}>
-            <Link className="menu-link" href="#showcase">
-              Showcase
+            <Link className="menu-link" href="#homepage">
+              Home
             </Link>
             <Link className="menu-link" href="#features">
               Features

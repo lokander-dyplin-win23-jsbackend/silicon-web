@@ -10,7 +10,7 @@
     z-index: -1;
     width: 45%;
     border-radius: 8px;
-    box-shadow: 0 0 20px var(--color-theme);
+    box-shadow: 0 0 30px var(--color-theme);
     transform: rotate(-25deg);
 
 }

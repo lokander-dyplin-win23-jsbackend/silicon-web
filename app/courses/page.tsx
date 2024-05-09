@@ -15,7 +15,7 @@ export default function Courses() {
                     <h1>Courses</h1>
                     <SearchFilters />
                 </div>
-                    <CourseItems  />
+                    {/* <CourseItems  /> */}
             </div>
         </section>
     );

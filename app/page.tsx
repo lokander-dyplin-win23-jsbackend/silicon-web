@@ -5,7 +5,7 @@ export default function Home() {
     <section className={styles.aboutUs}>
             <img className={styles.backgroundImage} src="images/SiliconWeb-Home-Image.svg" alt="" />
             <div className={`container ${styles.container}`}>
-                    <h1>Who are we?</h1>
+                    <h1>Meet the team</h1>
                 <div className={styles.content}>
                     <div className={styles.info}>
                         <img className={styles.image} src="images/alexD.svg" alt="Alexander" />

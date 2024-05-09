@@ -2,13 +2,13 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-    padding: 50px 0 200px 0;
+    padding: 50px 0 300px 0;
 }
 
 .aboutUs .backgroundImage {
     position: relative;
     z-index: -1;
-    width: 40%;
+    width: 45%;
     border-radius: 8px;
     box-shadow: 0 0 20px var(--color-theme);
     transform: rotate(-25deg);
@@ -22,12 +22,18 @@
     right: 0;
 }
 
+.aboutUs .container h1 {
+    padding-left: 150px;
+    font-size: 2rem;
+}
+
 .aboutUs .container .content {
     margin-top: 50px;
     width: 45%;
     text-align: left;
     display: flex;
     gap: 2rem;
+    
     
 }
 
@@ -36,6 +42,7 @@
     border-radius: 8px;
     box-shadow: 0 0 15px gray;
     text-align: center;
+    
 }
 
 .aboutUs .container .content .info .image {

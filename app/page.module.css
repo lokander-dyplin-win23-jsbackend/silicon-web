@@ -1,0 +1,52 @@
+.aboutUs {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    padding: 50px 0 200px 0;
+}
+
+.aboutUs .backgroundImage {
+    position: relative;
+    z-index: -1;
+    width: 40%;
+    border-radius: 8px;
+    box-shadow: 0 0 20px var(--color-theme);
+    transform: rotate(-25deg);
+
+}
+
+.aboutUs .container {
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.aboutUs .container .content {
+    margin-top: 50px;
+    width: 45%;
+    text-align: left;
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.aboutUs .container .content .info {
+    border: 1px solid var(--color-gray-200);
+    border-radius: 8px;
+    box-shadow: 0 0 15px gray;
+    text-align: center;
+}
+
+.aboutUs .container .content .info .image {
+    border-radius: 8px;
+}
+
+.aboutUs .container .content .info:hover {
+    transition: all 0.15s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 0 15px var(--color-theme);
+    
+}
+
+

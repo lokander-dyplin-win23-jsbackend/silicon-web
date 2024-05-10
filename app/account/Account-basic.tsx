@@ -1,38 +1,43 @@
-
+import styles from './Account.module.css'
 export default function AccountBasic() {
     return (
-       <> <section className="basic-info">
-            <form method="post" noValidate>
-                <h2>Account Details</h2>
-                <h5>Basic Info</h5>
-                <div className="content">
-                    <div id="form-firstname" className="input-group">
-                        <label>Firstname</label>
-                        <span></span>
-                        <input asp-for="Basic!.FirstName" />
+            <div className={`container ${styles.container}`}>
+            <section className={styles.basicInfo}>
+                <form method="post" noValidate>
+                    <h2>Account Details</h2>
+                    <h5>Account Info</h5>
+                    <div className={styles.content}>
+                        <div className={`input-group ${styles.formFirstname}`}>
+                            <label>Firstname</label>
+                            <span></span>
+                            <input asp-for="Basic!.FirstName" />
+                        </div>
+                        <div className={`input-group ${styles.formLastname}`}>
+                            <label>Lastname</label>
+                            <span></span>
+                            <input asp-for="Basic!.LastName" />
+                        </div>
+                        <div className={`input-group ${styles.formEmail}`}>
+                            <label>Email</label>
+                            <span></span>
+                            <input></input>
+                        </div>
+                        <div className={`input-group ${styles.formPhone}`}>
+                            <label>Phone</label>
+                            <input asp-for="Basic!.PhoneNumber" />
+                        </div>
+                        <div className={`input-group ${styles.formBio}`}>
+                        <label>Bio(optional)</label>
+                        <textarea></textarea>
+                        </div>
+                        <div className={styles.formButtons}>
+                            <button className="btn btn-gray" type="reset">Cancel</button>
+                            <button className="btn btn-theme" type="submit">Save changes</button>
+                        </div>
                     </div>
-                    <div id="form-lastname" className="input-group">
-                        <label>Lastname</label>
-                        <span></span>
-                        <input asp-for="Basic!.LastName" />
-                    </div>
-                    <div id="form-email" className="input-group">
-                        <label>Email</label>
-                        <span></span>
-                        <input></input>
-                    </div>
-                    <div id="form-phone" className="input-group">
-                        <label asp-for="Basic!.PhoneNumber"></label>
-                        <input asp-for="Basic!.PhoneNumber" />
-                    </div>
-                    <div id="form-bio" className="input-group">
-                       <textarea></textarea>
-                    </div>
-                    <div className="form-buttons">
-                        <button className="btn-gray" type="reset">Cancel</button>
-                        <button className="btn-theme" type="submit">Save changes</button>
-                    </div>
-                </div>
-            </form>
-        </section></>
+                </form>
+                <hr />
+            </section>
+            </div>
+  
     );}

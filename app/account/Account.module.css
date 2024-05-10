@@ -1,0 +1,156 @@
+.accountDetails {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 50px;
+    margin-bottom: 70px;
+ 
+}
+
+.accountDetails aside {
+    border-right: 1px solid #ccc;
+    padding-right: 50px;
+}
+
+.accountDetails aside .profileInfo {
+    margin: 20px;
+    text-align: center;
+}
+
+.accountDetails aside .profileInfo h5 {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.accountDetails aside .profileInfo p {
+    font-size: medium;
+}
+
+.accountDetails aside nav {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.accountDetails aside nav .btn {
+    margin: 10px 0;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+/* .accountDetails aside nav .btn {
+    text-align: left;
+    justify-content: flex-start;
+} */
+
+.accountDetails .details {
+    margin-top: 50px;
+    width: 80%;
+}
+
+/* .accountDetails .details .basicInfo {
+} */
+
+.accountDetails .details .basicInfo form {
+    padding: 1rem;
+}
+
+.accountDetails .details .basicInfo form h5 {
+    color: #007bff;
+}
+
+.accountDetails .details .basicInfo form .content {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname lastname" "email phone" "bio bio" "buttons buttons";
+}
+
+.accountDetails .details .basicInfo form .formFirstname {
+    grid-area: firstname;
+    display: grid;
+}
+
+.accountDetails .details .basicInfo form .formLastname {
+    grid-area: lastname;
+    display: grid;
+}
+
+.accountDetails .details .basicInfo form .formEmail {
+    grid-area: email;
+    display: grid;
+}
+
+.accountDetails .details .basicInfo form .formPhone {
+    grid-area: phone;
+    display: grid;
+}
+
+.accountDetails .details .basicInfo form .formBio {
+    grid-area: bio;
+    display: grid;
+    
+}
+
+.accountDetails .details .basicInfo form .formBio span {
+    color: #777;
+    font-weight: 400;
+}
+
+.accountDetails .details .basicInfo form .formButtons {
+    grid-area: buttons;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.accountDetails .details .addressInfo {
+    margin-top: 30px;
+}
+
+.accountDetails .details .addressInfo form {
+    padding: 1rem;
+}
+
+.accountDetails .details .addressInfo form h5 {
+    color: #007bff;
+}
+
+.accountDetails .details .addressInfo form .content {
+    display: grid;
+    gap: 1rem 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "addressline1 addressline1" "addressline2 addressline2" "postalcode city" "buttons buttons";
+}
+
+.accountDetails .details .addressInfo form .formAddressline1 {
+    grid-area: addressline1;
+    display: grid;
+    
+}
+
+.accountDetails .details .addressInfo form .formAddressline2 {
+    grid-area: addressline2;
+    display: grid;
+    
+}
+
+.accountDetails .details .addressInfo form .formAddressline2 span {
+    color: #777;
+    font-weight: 400;
+}
+
+.accountDetails .details .addressInfo form .formPostalcode {
+    grid-area: postalcode;
+    display: grid;
+}
+
+.accountDetails .details .addressInfo form .formCity {
+    grid-area: city;
+    display: grid;
+}
+
+.accountDetails .details .addressInfo form #formButtons {
+    grid-area: buttons;
+    margin: 20px 0;
+    display: flex;
+    gap: 20px;
+}

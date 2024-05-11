@@ -1,0 +1,90 @@
+.accountDetails {
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    gap: 100px;
+    margin-bottom: 70px;
+    /* height: 100vh; */
+ 
+}
+
+.accountDetails aside {
+    border-right: 1px solid #ccc;
+    padding-right: 50px;
+}
+
+.accountDetails aside .profileInfo {
+    margin: 20px;
+    text-align: center;
+}
+
+.accountDetails aside .profileInfo h5 {
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+
+.accountDetails aside .profileInfo p {
+    font-size: medium;
+}
+
+.accountDetails aside nav {
+    margin-top: 50px;
+    text-align: left;
+}
+
+.accountDetails aside nav .btn {
+    margin: 10px 0;
+    text-align: left;
+    justify-content: flex-start;
+}
+
+.accountDetails .details {
+    margin-top: 50px;
+    width: 80%;
+}
+
+
+.accountDetails .details .content form{
+    margin-top: 50px;
+    width: 70%;
+
+}
+.notificationItem {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.notificationItem label{
+    margin-bottom: 1rem;
+}
+
+.sliderItem {
+    flex-direction: row;
+    align-items: center;
+}
+
+.labelAndText {
+    margin-top: 10px;
+}
+
+.labelAndText label {
+    font-weight: 800  !important;
+}
+
+.labelAndText p {
+    font-size: 0.6rem;
+}
+
+.formButtons {
+    padding: 6rem 0;
+    display: flex;
+    gap: 2rem;
+}
+
+/* .btnSwitch .switch input:checked + .slider {
+    background-color: var(--color-success);
+  } */
+
+
+
+

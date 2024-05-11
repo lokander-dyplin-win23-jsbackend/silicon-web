@@ -209,6 +209,7 @@ a:hover {
   background-color: var(--color-white);
 }
 
+
 .btn-switch .switch .slider {
   position: absolute;
   cursor: pointer;

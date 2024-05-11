@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './Account.module.css'
 export default function AccountProfile() {
     return (
@@ -18,9 +19,9 @@ export default function AccountProfile() {
                 </div>
             </div>
             <nav>
-                <a className={`btn btn-theme ${styles.btn}`}><i className="fa-regular fa-gear"></i>Account Details</a>
-                <a className={`btn btn-transparent ${styles.btn}`}><i className="fa-regular fa-bell"></i>Notifications</a>
-                <a className={`btn btn-transparant ${styles.btn}`}><i className="fa-regular fa-right-to-bracket"></i>Sign out</a>
+                <Link className={`btn btn-theme ${styles.btn}`}href="/account"><i className="fa-regular fa-gear"></i>Account Details</Link>
+                <Link className={`btn btn-transparent ${styles.btn}`}href="/notifications"><i className="fa-regular fa-bell"></i>Notifications</Link>
+                <Link className={`btn btn-transparant ${styles.btn}`}href="/"><i className="fa-regular fa-right-to-bracket"></i>Sign out</Link>
             </nav>
             </aside>
         </section>

@@ -68,7 +68,7 @@
 }
 
 .labelAndText label {
-    font-weight: 800;
+    font-weight: 800  !important;
 }
 
 .labelAndText p {

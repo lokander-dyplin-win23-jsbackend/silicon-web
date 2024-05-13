@@ -59,6 +59,7 @@ export default function SignUp() {
                 value={signUpForm.firstName}
                 onChange={onChange}
                 type="text"
+                name="firstName"
               />
             </div>
             <div className={`input-group ${styles.formLastname}`}>
@@ -68,6 +69,7 @@ export default function SignUp() {
                 type="text"
                 value={signUpForm.lastName}
                 onChange={onChange}
+                name="lastName"
               />
             </div>
             <div className={`input-group ${styles.formEmail}`}>
@@ -77,6 +79,7 @@ export default function SignUp() {
                 type="email"
                 value={signUpForm.email}
                 onChange={onChange}
+                name="email"
               />
             </div>
             <div className={`input-group ${styles.formPassword}`}>
@@ -86,6 +89,7 @@ export default function SignUp() {
                 type="password"
                 value={signUpForm.password}
                 onChange={onChange}
+                name="password"
               />
             </div>
             <div className={`input-group ${styles.formConfirm}`}>
@@ -95,6 +99,7 @@ export default function SignUp() {
                 type="password"
                 value={signUpForm.confirmPassword}
                 onChange={onChange}
+                name="confirmPassword"
               />
             </div>
             <div className={`input-group ${styles.formTerms}`}>

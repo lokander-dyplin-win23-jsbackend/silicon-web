@@ -25,16 +25,13 @@ export default function SignUp() {
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    const res = await fetch(
-      "https://accountprovider-silicons.azurewebsites.net/api/SignUp?code=ITi2BUi90A1CuUSqitGK74pA25BZrI3Q6T6VHMzLSIuqAzFuAiDbhQ==",
-      {
-        method: "post",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(signUpForm),
-      }
-    );
+    const res = await fetch("", {
+      method: "post",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(signUpForm),
+    });
     if (res.status === 200) {
       router.push("/confirm?email=" + signUpForm.email);
     } else {

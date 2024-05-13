@@ -45,6 +45,7 @@ export default function SignUp() {
   return (
     <section className={styles.signUp}>
       <div className={`container ${styles.container}`}>
+        {error && <div className="alrt alert-danger">{error} </div>}
         <form className="form" onSubmit={handleSubmit} noValidate>
           <h1> Create Account</h1>
           <p>

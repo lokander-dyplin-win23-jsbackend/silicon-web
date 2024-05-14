@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { FormEvent, useState } from "react";
@@ -35,12 +35,12 @@ export default function Confirm() {
   return (
     <div onSubmit={handleSubmit} className="confirm">
       <div className="container">
-        {error && <div className="alrt alert-danger">{error} </div>}
+        {error && <div className="alert alert-danger">{error} </div>}
 
         <form noValidate>
           <p>
             Havent got an verification code?{" "}
-            <link href="/resend">Resend here</link>
+            <Link href="/resend">Resend here</Link>
           </p>
           <div className="form-content">
             <div id="form-code" className="input-group">

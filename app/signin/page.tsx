@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from "next/link";
 import styles from "./signin.module.css";
 import { useFormState } from "react-dom";
@@ -30,20 +30,19 @@ export default function SignIn() {
           </p>
           <div className={styles.content}>
             <div className={`input-group ${styles.formEmail}`}>
-              <label htmlFor="Email">Email</label>
+              <label>Email</label>
               <span className="validation-error"></span>
-              <input type="email" />
+              <input type="text" name="email" />
             </div>
             <div className={`input-group ${styles.formPassword}`}>
-              <label htmlFor="Password">Password</label>
+              <label>Password</label>
               <span className="validation-error"></span>
-              <input type="password" />
+              <input type="password" name="password" />
             </div>
             <div className={`input-group ${styles.formTerms}`}>
               <div className="input-group">
                 <input
                   type="checkbox"
-                  value=""
                   className="agreeterms"
                   name="isPersistent"
                 />

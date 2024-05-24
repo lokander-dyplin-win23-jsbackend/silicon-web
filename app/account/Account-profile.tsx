@@ -1,5 +1,7 @@
+'use client'
 import Link from 'next/link';
 import styles from './Account.module.css'
+import FileUploadForm from "./FileUploader";
 export default function AccountProfile() {
     return (
         
@@ -9,6 +11,7 @@ export default function AccountProfile() {
                 <div className={styles.profilePic}>
                     <img src="./images.jpg" />
                 </div>
+                {/* <FileUploadForm /> */}
                 <form encType="multipart/form-data" method="post" asp-action="UploadProfileImage" asp-controller="Account">
                 <input id="fileUploader" type="file" name="file" hidden/>    
                 <label htmlFor="fileUploader" className="btn btn-circle btn-circl-sm"><i className="fa-regular fa-refresh"></i></label>

@@ -10,7 +10,7 @@ type ActionTypes = {
 
 export default async function signInAction(
   currentState: any,
-  formData: FormData,
+  formData: FormData
 ): Promise<ActionTypes> {
   const email = formData.get("email");
   const password = formData.get("password");
@@ -31,29 +31,42 @@ export default async function signInAction(
           "content-type": "application/json",
         },
         body: JSON.stringify(signInFormData),
-      },
+      }
     );
 
-    if (res.ok) {
-      // This checks for any 2xx response status
-      const result = await res.json();
+    const rawResponse = await res.text(); // Get raw response text
 
-      // Check if the token is present
-      if (result.token) {
-        cookies().set("Authorization", result.token, {
-          secure: true,
-          httpOnly: true,
-          expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // Fix expires
-          path: "/",
-          sameSite: "strict",
-        });
-        return { success: true };
-      } else {
-        return { success: false, error: "No token received" };
+    if (res.ok) {
+      try {
+        const result = JSON.parse(rawResponse); // Parse JSON from the raw response
+
+        // Check if the token is present
+        if (result.token) {
+          cookies().set("Authorization", result.token, {
+            secure: true,
+            httpOnly: true,
+            expires: new Date(Date.now() + 24 * 60 * 60 * 1000), // Fix expires
+            path: "/",
+            sameSite: "strict",
+          });
+          return { success: true };
+        } else {
+          return { success: false, error: "No token received" };
+        }
+      } catch (jsonError) {
+        console.error("Error parsing JSON response:", jsonError);
+        console.error("Raw response:", rawResponse); // Log the raw response for debugging
+        return { success: false, error: "Invalid JSON response from server" };
       }
     } else {
-      const result = await res.json();
-      return { success: false, error: result.error || "Unknown error" };
+      try {
+        const result = JSON.parse(rawResponse); // Attempt to parse error response
+        return { success: false, error: result.error || "Unknown error" };
+      } catch (jsonError) {
+        console.error("Error parsing JSON response:", jsonError);
+        console.error("Raw response:", rawResponse); // Log the raw response for debugging
+        return { success: false, error: "Invalid JSON response from server" };
+      }
     }
   } catch (error) {
     console.error("Sign-in error:", error);

@@ -17,7 +17,7 @@ const FileUploadForm = () => {
             formData.append('file', fileInput.files[0]);
 
             try {
-                const res = await fetch('https://fileprovider-silicon-lokdyp.azurewebsites.net/api/Upload?code=8WwSqNIRJE8GbGdgrX21aqX2KQM2xnvhG7JRvHkXlwaDAzFuIV6Iuw%3D%3D/Upload?containerName=uploads', {
+                const res = await fetch('https://fileprovider-silicon-lokdyp.azurewebsites.net/api/Upload?code=8WwSqNIRJE8GbGdgrX21aqX2KQM2xnvhG7JRvHkXlwaDAzFuIV6Iuw%3D%3D&containerName=uploads', {
                     method: 'POST',
                     body: formData,
                 });

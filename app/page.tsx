@@ -18,7 +18,7 @@ export default function Home() {
               alt="Alexander"
             />
             <h5>Alexander Dyplin</h5>
-            <p>alexander.dyplin@domain.com</p>
+            <p>alexander.dyplin@outlook.com</p>
           </div>
           <div className={styles.info}>
             <img

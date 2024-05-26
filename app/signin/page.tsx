@@ -14,7 +14,7 @@ export default function SignIn() {
 
   useEffect(() => {
     if (signInForm.success) {
-      router.push("/account");
+      router.push("/");
     }
   }, [router, signInForm]);
   return (

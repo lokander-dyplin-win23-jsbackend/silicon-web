@@ -1,13 +1,35 @@
 export interface Course {
     id: number;
+    imageUri: string;
+    imageHeaderUri: string;
     isBestseller: boolean;
-    image: string;
+    isDigital: boolean;
+    categories: string[];
     title: string;
-    author: string;
-    price: string;
-    discountPrice: string | null;
-    hours: string;
+    ingress: string;
+    starRating: number;
+    reviews: string;
     likesInProcent: string;
     likesInNumbers: string;
+    hours: string;
+    authors: string[];
+    prices: {
+        currency: string;
+        price: number;
+        discount: number;
+    };
+
+    content: {
+        description: string;
+        includes: string[];
+        programDetails: ProgramDetails[];
+    };
+
+    
+}
+export interface ProgramDetails {
+    id: number;
+    title: string;
+    description: string;
 }
 

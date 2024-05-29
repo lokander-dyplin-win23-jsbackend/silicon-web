@@ -1,10 +1,15 @@
+import BookmarkBtn from '../components/bookmark/Bookmark';
 import styles from './courses.module.css'
 import SearchFilters from "@/app/components/searchbox/SearchFilters";
-import CourseItems from "../components/coursecontent/CourseItems";
+import { Course } from "@/app/interfaces/coursesTypes";
 
+interface CourseItemProps {
+    item:Course
+}
 
-
-export default function Courses() {
+export default function Courses({item}:CourseItemProps) {
+    
+    console.log(item)
     return (
         <section id={styles.ourCourses}>
             <div className={ `container ${styles.container}`}>
@@ -15,8 +20,25 @@ export default function Courses() {
                     <h1>Courses</h1>
                     <SearchFilters />
                 </div>
-                    {/* <CourseItems  /> */}
+                <div key={item.Id} className="course-item">
+                    <div className="bestseller">{item.IsBestseller}</div>
+                        {/* <BookmarkBtn itemId={item} /> */}
+                        <img src={item.ImageUri} alt={item.Title} />
+                        <div className="courses">
+                            <h5 className="title">{item.Title}</h5>
+                            <p className="author">{item.Authors}</p>
+                            <div className="pricing">
+                                <div className="discount">{item.Prices.Discount}</div>
+                                <div className="price">{item.Prices.Price}</div>
+                            </div>
+                            <hr />
+                            <div className="ratings">
+                                <p><i className="fa-regular fa-clock"></i>{item.Hours} hours</p>
+                                <p><i className="fa-regular fa-thumbs-up"></i>{item.LikesInProcent} ({item.LikesInNumbers})</p>
+                            </div>
+                        </div>
+                    </div>
             </div>
         </section>
     );
-  }
+}

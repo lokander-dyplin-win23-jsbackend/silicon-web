@@ -8,8 +8,8 @@
 // export default function CourseItems({item}:CourseItemProps) {
 
 //     return (
-//         <link href={`/courses/${item.id}`} className="course-items">
-//             <div className="bestseller">{item.isBestseller}</div>
+//         <div className="course-items">
+//             <div className="bestseller">{item.isBestSeller}</div>
 //             <BookmarkBtn itemId={item.id} />
 //             <img src={item.imageUri} alt={item.title} />
 //             <div className="courses">
@@ -25,6 +25,6 @@
 //                     <p><i className="fa-regular fa-thumbs-up"></i>{item.likesInProcent} ({item.likesInNumbers})</p>
 //                 </div>
 //             </div>
-//         </link>
+//         </div>
 //     );
 //   }

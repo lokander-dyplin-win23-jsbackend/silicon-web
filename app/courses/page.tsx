@@ -8,6 +8,8 @@ interface CourseItemProps {
 }
 
 export default function Courses({item}:CourseItemProps) {
+    
+    console.log(item)
     return (
         <section id={styles.ourCourses}>
             <div className={ `container ${styles.container}`}>
@@ -18,25 +20,25 @@ export default function Courses({item}:CourseItemProps) {
                     <h1>Courses</h1>
                     <SearchFilters />
                 </div>
-                {/* <link className="course-items">
-                    <div className="bestseller">{item.isBestseller}</div>
-                        <BookmarkBtn itemId={item.id} />
-                        <img src={item.imageUri} alt={item.title} />
+                <div key={item.Id} className="course-item">
+                    <div className="bestseller">{item.IsBestseller}</div>
+                        {/* <BookmarkBtn itemId={item} /> */}
+                        <img src={item.ImageUri} alt={item.Title} />
                         <div className="courses">
-                            <h5 className="title">{item.title}</h5>
-                            <p className="author">{item.authors}</p>
+                            <h5 className="title">{item.Title}</h5>
+                            <p className="author">{item.Authors}</p>
                             <div className="pricing">
-                                <div className="discount">{item.prices.discount}</div>
-                                <div className="price">{item.prices.price}</div>
+                                <div className="discount">{item.Prices.Discount}</div>
+                                <div className="price">{item.Prices.Price}</div>
                             </div>
                             <hr />
                             <div className="ratings">
-                                <p><i className="fa-regular fa-clock"></i>{item.hours} hours</p>
-                                <p><i className="fa-regular fa-thumbs-up"></i>{item.likesInProcent} ({item.likesInNumbers})</p>
+                                <p><i className="fa-regular fa-clock"></i>{item.Hours} hours</p>
+                                <p><i className="fa-regular fa-thumbs-up"></i>{item.LikesInProcent} ({item.LikesInNumbers})</p>
                             </div>
                         </div>
-                    </link> */}
+                    </div>
             </div>
         </section>
     );
-  }
+}

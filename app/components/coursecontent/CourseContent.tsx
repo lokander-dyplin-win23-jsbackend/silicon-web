@@ -8,7 +8,7 @@ const CourseContent: React.FC = () => {
   useEffect(() => {
     const fetchCourses = async () => {
       try {
-        const res = await fetch('', {
+        const res = await fetch('https://cosmos-silicon-lokdyp.documents.azure.com:443/;AccountKey=00ZaoSvYO9YG85FILx25TMsfEY7NGrrApfRYelt5pIhLnfoboShHsO0JlK9bkolEYkqMJ5a7J9ITACDb0RsIhg==;', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'

@@ -55,7 +55,6 @@ const Courses: React.FC = () => {
               }
               prices {
                 price
-                currency
                 discount
               }
               hours
@@ -112,24 +111,26 @@ const Courses: React.FC = () => {
                 <div className={styles.headline}>
                     <h1>Courses</h1>
                     <div className={styles.forms}>
-        <select id={styles.choose}>
-            <option>All Categories</option>
-            <option>Fullstack</option>
-            <option>Web developer</option>
-        </select>
-        <form>
-            <input className="form-control" type="text" placeholder="Search courses" />
-                <i className="fa-regular fa-magnifying-glass"></i>
-        </form>
-    </div>
-                </div>
+                <select id={styles.choose}>
+                    <option>All Categories</option>
+                    <option>Fullstack</option>
+                    <option>Web developer</option>
+                </select>
+                <form>
+                    <input className="form-control" type="text" placeholder="Search courses" />
+                        <i className="fa-regular fa-magnifying-glass"></i>
+                </form>
+            </div>
+        </div>
 
-
+    
           <div className={styles.content}>
             {courses.map((item) => (
             <div key={item.id} className={styles.courseItems}>
-                <div className={styles.bestseller}>{item.isBestSeller}Bestseller</div>
-                    {/* <BookmarkBtn course={item} /> */}
+                    {item.isBestSeller && (
+                    <div className={styles.bestseller}>Bestseller</div>
+                    )}
+                    <button className={ `btn-circle ${styles.button}`}><i className="fa-regular fa-bookmark"></i></button>
                     <img src={item.imageUri} alt={item.title} />
                     <div className={styles.courses}>
                         <h5 className={styles.title}>{item.title}</h5>
@@ -138,7 +139,7 @@ const Courses: React.FC = () => {
                         {item.prices.discount > 0 ? (
                       <>
                         <p className={styles.discount}>${(item.prices.price - item.prices.discount).toFixed(2)}</p>
-                        <p className={styles.price}>${item.prices.price.toFixed(2)}</p>
+                        <p className={styles.crossed}>${item.prices.price.toFixed(2)}</p>
                       </>
                     )
                     :
@@ -149,8 +150,8 @@ const Courses: React.FC = () => {
                         </div>
                         <hr />
                         <div className={styles.ratings}>
-                            <p><i className="fa-regular fa-clock"></i>{item.hours} hours</p>
-                            <p><i className="fa-regular fa-thumbs-up"></i>{item.likesInProcent} ({item.likesInNumbers})</p>
+                            <p className={styles.hours}><i className="fa-regular fa-clock"></i>{item.hours} hours</p>
+                            <p className={styles.likes}><i className="fa-regular fa-thumbs-up"></i>{item.likesInProcent} ({item.likesInNumbers})</p>
                         </div>
                     </div>
                 </div>

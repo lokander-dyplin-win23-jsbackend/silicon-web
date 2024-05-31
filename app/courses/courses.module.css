@@ -39,6 +39,9 @@
     border-radius: 10px;
     gap: 20px;
 }
+#ourCourses .container .content img {
+    border-radius: 15px;
+}
 
 @media (min-width: 992px) {
     #ourCourses .container .content {
@@ -48,22 +51,22 @@
     }
 }
 
-#ourCourses .container .content .course-items {
+#ourCourses .container .content .courseItems {
     justify-content: center;
-    border: 1px solid --color-gray-100;
+    border: 1px solid var(--color-gray-100);
     border-radius: 15px;
     text-align: left;
     position: relative;
     box-shadow: 0 0 15px gray;
 }
 
-#ourCourses .container .content .course-items:hover {
+#ourCourses .container .content .courseItems:hover {
     transition: all 0.15s ease-in-out;
     cursor: pointer;
     box-shadow: 0 0 15px gray;
 }
 
-#ourCourses .container .content .course-items .bestseller {
+#ourCourses .container .content .courseItems .bestseller {
     position: absolute;
     top: 15px;
     left: 10px;
@@ -73,7 +76,7 @@
     padding: 2px;
 }
 
-#ourCourses .container .content .course-items button {
+#ourCourses .container .content .courseItems button {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -82,45 +85,45 @@
     border-radius: 25px;
 }
 
-#ourCourses .container .content .course-items button:hover {
+#ourCourses .container .content .courseItems button:hover {
     opacity: 0.5;
 }
 
-#ourCourses .container .content .course-items hr {
+#ourCourses .container .content .courseItems hr {
     margin-left: 25px;
     width: 90%;
 }
 
-#ourCourses .container .content .course-items h5 {
+#ourCourses .container .content .courseItems .title {
     padding-left: 15px;
     padding-top: 10px;
 }
 
-#ourCourses .container .content .course-items p {
+#ourCourses .container .content .courseItems .author {
     padding-left: 15px;
 }
 
-#ourCourses .container .content .course-items .pricing {
+#ourCourses .container .content .courseItems .pricing {
     display: flex;
     font-size: 18px;
     font-weight: 600;
 }
 
-#ourCourses .container .content .course-items .pricing .discount {
+#ourCourses .container .content .courseItems .pricing .discount {
     color: var(--color-danger);
     font-size: 18px;
     font-weight: 600;
     padding-left: 15px;
 }
 
-#ourCourses .container .content .course-items .pricing .price {
+#ourCourses .container .content .courseItems .pricing .price {
     color: var(--color-theme);
     margin-left: 15px;
     font-size: 18px;
     font-weight: 600;
 }
 
-#ourCourses .container .content .course-items .pricing .discount-enabled {
+#ourCourses .container .content .courseItems .pricing .discount-enabled {
     color: var(--color-gray-400);
     text-decoration: line-through;
     font-size: 18px;
@@ -128,12 +131,12 @@
     margin-left: 5px;
 }
 
-#ourCourses .container .content .course-items .ratings {
+#ourCourses .container .content .courseItems .ratings {
     display: flex;
     gap: 5px;
     padding-left: 5px;
 }
 
-#ourCourses .container .content .course-items .ratings i {
+#ourCourses .container .content .courseItems .ratings i {
     margin: 5px;
 }
